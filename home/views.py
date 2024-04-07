@@ -3,5 +3,5 @@ from django.http import HttpResponse
 
 def home(request):
 
-    content = "Interchange App"
+    content = "Interchange App Test"
     return HttpResponse(content, content_type="text/plain")
