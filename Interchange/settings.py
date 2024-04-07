@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-b1k0^7aj6r)3w)kja7-*rbu3hy$+0&3u3i$gc1c3n74u1v^wn3
 DEBUG = True
 
 
-ALLOWED_HOSTS = ["interchangeapp.azurewebsites.net", "127.0.0.1"]
+ALLOWED_HOSTS = ["interchangeapp.azurewebsites.net", "127.0.0.1", "localhost"]
 CSRF_TRUSTED_ORIGINS = ["https://interchangeapp.azurewebsites.net"]
 
 
