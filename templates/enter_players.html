@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Players</title>
+</head>
+<body>
+    <h1>Enter Players</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div id="players-container">
+            <!-- Initial player forms -->
+            {% for form in player_formset %}
+                <div class="player-row">
+                    {{ form.as_p }}
+                </div>
+            {% endfor %}
+        </div>
+        <button type="button" id="add-player-btn">Add Player</button>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("add-player-btn").addEventListener("click", function() {
+            var playerContainer = document.getElementById("players-container");
+            var newPlayerRow = document.createElement("div");
+            newPlayerRow.classList.add("player-row");
+            newPlayerRow.innerHTML = "{{ player_formset.empty_form.as_p }}";
+            playerContainer.appendChild(newPlayerRow);
+        });
+    </script>
+</body>
+</html>

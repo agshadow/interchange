@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Match Substitution App</h1>
+    <ul>
+        <li><a href="{{ match_create_url }}">Create a Match</a></li>
+        <li><a href="{{ substitution_create_url }}">Create a Substitution</a></li>
+    </ul>
+    <p>Click the link below to enter player data:</p>
+    <a href="{% url 'enter_players' %}">Enter Player Data</a>
+</body>
+</html>
